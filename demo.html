@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced HTML Features Demo</title>
+</head>
+<body>
+
+<!-- Navigation Links (Internal Linking) -->
+<h1>Advanced HTML Demo Page</h1>
+<nav>
+    <a href="#lists">Lists</a> |
+    <a href="#formatting">Text Formatting</a> |
+    <a href="#code">Code Example</a> |
+    <a href="#contact">Address</a>
+</nav>
+
+<hr>
+
+<!-- Date -->
+<p><strong>Today's Date:</strong> <time datetime="2025-01-01">January 1, 2025</time></p>
+
+<hr>
+
+<!-- LISTS SECTION -->
+<h2 id="lists">1. Lists in HTML</h2>
+
+<h3>Unordered List</h3>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+<h3>Ordered List</h3>
+<ol>
+    <li>Wake up</li>
+    <li>Brush teeth</li>
+    <li>Start coding</li>
+</ol>
+
+<h3>Description List</h3>
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+
+    <dt>JS</dt>
+    <dd>JavaScript programming language</dd>
+</dl>
+
+<hr>
+
+<!-- TEXT FORMATTING -->
+<h2 id="formatting">2. Text Formatting</h2>
+
+<p>This is <small>small text</small> inside a paragraph.</p>
+
+<mark>Highlighted Item</mark>
+
+<strong>Important Text</strong>
+
+<em>Emphasized Text</em>
+
+<p>
+    The abbreviation <abbr title="HyperText Markup Language">HTML</abbr> is used for web pages.
+</p>
+
+<!-- non breaking space -->
+<p>This is normal text with spaces.</p>
+<p>This     text     has     multiple spaces.</p>
+
+<!-- Multiple space -->
+<p>This&nbsp;&nbsp;text&nbsp;&nbsp;has&nbsp;&nbsp;extra&nbsp;&nbsp;spaces.</p>
+
+<!-- space before paragraph -->
+<p>First paragraph.</p>
+<p>Second paragraph with space above.</p>
+
+<p>This is <del>striked-out text</del> example.</p>
+
+<p>Chemical Formula Examples:</p>
+<ul>
+    <li>Water: H<sub>2</sub>O</li>
+    <li>Carbon Dioxide: CO<sub>2</sub></li>
+    <li>Sulfuric Acid: H<sub>2</sub>SO<sub>4</sub></li>
+</ul>
+
+<p>Keyboard Shortcut Example:  
+    Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+</p>
+
+<hr>
+
+<!-- CODE SECTION -->
+<h2 id="code">3. Code Format (C Program)</h2>
+
+<pre>
+<code>
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;   // Base case
+    }
+    return n * factorial(n - 1);  // Recursive call
+}
+
+int main() {
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int result = factorial(num);
+
+    printf("Factorial of %d is %d\n", num, result);
+
+    return 0;
+}
+
+</code>
+</pre>
+
+<hr>
+
+<!-- ADDRESS SECTION -->
+<h2 id="contact">4. Contact / Address</h2>
+
+<address>
+Monika M <br>
+B.Tech AI & DS Student <br>
+India <br>
+Email: monika1311@gmail.com
+</address>
+
+<hr>
+
+<!-- Back to Top Link -->
+<p><a href="#top">Back to Top</a></p>
+
+</body>
+</html>
