@@ -1,92 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>HTML Features Display</title>
+    <meta charset="UTF-8">
+    <title>My HTML Page</title>
 </head>
-
 <body>
 
-    <h1>HTML Features Display Page </h1>
+<!-- Header -->
+<header>
+    <h1>Welcome to My HTML Demo Page</h1>
+</header>
 
-    <!-- LINKS -->
-    <h2>Hyperlinks</h2>
-
+<!-- Navigation -->
+<nav>
     <p>
-        <a href="https://www.google.com">Open Google (same tab)</a>
+        <a href="https://www.google.com">Google</a> |
+        <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+        <a href="#table">Table</a> |
+        <a href="#iframe">iFrame</a> |
+        <a href="#marquee">Marquee</a>
     </p>
+</nav>
 
-    <p>
-        <a href="https://www.youtube.com" target="_blank">Open YouTube (new tab)</a>
-    </p>
+<!-- Images -->
+<h2>Images</h2>
+<img src="Virat Kohli.jpg" alt="Local Image" width="200"><br><br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjJ9EOK-lxTpcFk14ql9JzGzxAEiJ08wT_WA&s" alt="Online Image" width="200">
 
+<!-- iFrame Video Selector -->
+<h2 id="iframe">YouTube Video Selector</h2>
+<ul>
+    <li><a href="https://www.youtube.com/embed/TkZBN4GHCzo" target="myframe">Nob To Pro</a></li>
+    <li><a href="https://www.youtube.com/embed/HMT-TPNkzCM" target="myframe">Vlog</a></li>
+    <li><a href="https://www.youtube.com/embed/mI_LjbbYf08" target="myframe">Stranger Things</a></li>
+</ul>
+<iframe name="myframe" width="500" height="350"></iframe>
 
-    <!-- IMAGES -->
-    <h2>Images</h2>
+<br><br>
+<h2>Load Another HTML File</h2>
+<iframe src="form.html" width="600" height="300"></iframe>
 
-    <img src="Virat Kohli.jpg" width="250" alt="Local Image"><br><br>
+<hr>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjJ9EOK-lxTpcFk14ql9JzGzxAEiJ08wT_WA&s"
-         alt="Online Image">
+<!-- Marquee Examples -->
+<h2 id="marquee">Marquee Examples</h2>
+<marquee>Normal marquee scrolling text</marquee>
+<marquee direction="right">Right side scrolling</marquee>
+<marquee behavior="alternate" scrollamount="8">Bouncing marquee</marquee>
+<marquee bgcolor="lightblue" scrollamount="5" width="300">Colored marquee box</marquee>
+<marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="7">Hover to stop scrolling text</marquee>
+<marquee direction="left" scrollamount="8">
+    <img src="download.png" width="150">
+</marquee>
 
-
-    <!-- IFRAMES -->
-    <h2>IFrame Example</h2>
-
-    <iframe src="form.html" width="600" height="300"></iframe>
-
-
-    <!-- VIDEO LIST WITH TARGET IFRAMES -->
-    <h2>YouTube Videos</h2>
-
-    <ul>
-        <li>
-            <a href="https://www.youtube.com/embed/TkZBN4GHCzo" target="myframe">
-                Nob To Pro
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.youtube.com/embed/HMT-TPNkzCM" target="myframe">
-                Vlog
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.youtube.com/embed/mI_LjbbYf08" target="myframe">
-                Stranger Things
-            </a>
-        </li>
-    </ul>
-
-    <iframe name="myframe" width="500" height="400"></iframe>
+<hr>
 
 
-    <!-- MARQUEE SECTION -->
-    <h2>Marquee Examples</h2>
+<!-- Table Creation -->
 
-    <marquee>Normal marquee</marquee>
-
-    <marquee direction="right">Right direction marquee</marquee>
-
-    <marquee behavior="alternate" scrollamount="8">
-        Bouncing marquee
-    </marquee>
-
-    <marquee bgcolor="lightblue" scrollamount="5" width="300">
-        Colored marquee box
-    </marquee>
-
-    <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="7">
-        Hover to stop scrolling
-    </marquee>
-
-    <marquee direction="left" scrollamount="8">
-        <img src="download.png" width="150">
-    </marquee>
-
-    <!-- Table Creation -->
-
-    <table border="1" cellpadding="10" cellspacing="0" width="70%" align="center" bgcolor="#f9f9f9">
+    <table id="table" border="1" cellpadding="10" cellspacing="0" width="70%" align="center" bgcolor="#f9f9f9">
     <caption>
         <h2 style="margin:5px;">Student Performance Report</h2>
     </caption>
@@ -132,6 +104,7 @@
     </tr>
 </table>
 
+<!-- Table with Rowspan & Colspan -->
 <table border="1" cellpadding="10" cellspacing="0" width="70%" align="center">
 
     <caption><h2>Employee Work Report</h2></caption>
@@ -173,7 +146,10 @@
 </table>
 
 
+<!-- Footer -->
+<footer>
+    <p>© 2025 | Designed by Monika</p>
+</footer>
+
 </body>
 </html>
-
-
