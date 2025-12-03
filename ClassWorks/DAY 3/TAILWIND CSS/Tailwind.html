@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tailwind Dark/Light Mode Toggle</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    function toggleMode() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');   // back to light mode
+      } else {
+        html.classList.add('dark');      // switch to dark mode
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen flex flex-col items-center justify-center gap-6 transition-colors duration-500">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold mb-4">Hello Monika 👋</h1>
+    <p class="mb-6">This text changes color in dark mode.</p>
+    <button onclick="toggleMode()" 
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      Toggle Dark/Light Mode
+    </button>
+  </div>
+
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:bg-green-500 md:hover:bg-green-700 lg:bg-red-300 lg:hover:bg-red-500">
+    Click Me !
+  </button>
+
+  <h1 class="text-3xl font-bold underline mt-5 md:text-right sm:text-left lg:text-center">
+    Hello, Tailwind CSS!
+  </h1>
+</body>
+</html>

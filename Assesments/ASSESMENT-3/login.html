@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LearnPro – Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-gray-800">LearnPro</h1>
+    <ul class="hidden md:flex gap-8 text-lg text-gray-700">
+        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-600">About</a></li>
+        <li><a href="login.html" class="hover:text-blue-600">Login</a></li>
+    </ul>
+    <button class="md:hidden text-3xl">☰</button>
+</nav>
+
+<!-- LOGIN FORM -->
+<div class="max-w-xl mx-auto bg-white p-10 mt-12 shadow-lg rounded-lg">
+    <h2 class="text-3xl font-bold mb-6 text-center">Student Login</h2>
+
+    <form>
+        <label class="font-semibold">Name:</label>
+        <input type="text" class="w-full border p-3 mt-2 rounded-md mb-4">
+
+        <label class="font-semibold">Age:</label>
+        <input type="number" class="w-full border p-3 mt-2 rounded-md mb-4">
+
+        <label class="font-semibold">Course Interested:</label>
+        <select class="w-full border p-3 mt-2 rounded-md mb-4">
+            <option>Select Course</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Machine Learning</option>
+            <option>AI Engineering</option>
+        </select>
+
+        <label class="font-semibold">Email:</label>
+        <input type="email" class="w-full border p-3 mt-2 rounded-md mb-4">
+
+        <label class="font-semibold">Password:</label>
+        <input type="password" class="w-full border p-3 mt-2 rounded-md mb-6">
+
+        <button class="w-full bg-blue-600 text-white py-3 rounded-md text-lg hover:bg-blue-700">
+            Login
+        </button>
+    </form>
+</div>
+
+<footer class="bg-gray-900 text-white py-6 mt-16 text-center">
+    © 2025 LearnPro. Learning Made Simple.
+</footer>
+
+</body>
+</html>

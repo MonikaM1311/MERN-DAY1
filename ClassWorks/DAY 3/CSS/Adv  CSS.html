@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Style</title>
+    <style>
+    /* Base button style */
+    .my-button {
+      background-color: #4CAF50; /* Green */
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s, transform 0.2s;
+      margin-right: 18px;
+    }
+
+    /* Hover effect */
+    .my-button:hover {
+      background-color: #08510b; /* Darker green */
+      transform: scale(1.05);   /* Slight zoom */
+      color: rgb(0, 255, 4);  /* Change text color on hover */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Add shadow on hover */
+      font-size: 18px; /* Increase font size on hover */
+    }
+
+    .box {
+      padding: 16px;
+      margin: 12px 0;
+      width: 150px;
+      height: 10px;
+      font-family: fantasy;
+      text-align: center;
+      color: rgb(247, 239, 17);
+      background-color: #4CAF50; /* Green background */
+      box-shadow: 0 4px 8px #42ff485a; /* Shadow color */
+      position: absolute; /* Positioning context */ /* or relative or fixed or sticky */
+      top: 100px; /* Distance from the top */
+      left: 100px; /* Distance from the left */
+    }
+
+    .box-solid {
+      border: 2px solid ;         /* outline (solid) */
+      border-radius: 6px;          /*optional: rounded corners */
+    }
+
+    .Std{
+        position: fixed;
+        top: 100px;
+        right: 70px;
+        background-color: orange;
+
+    }
+
+    .STICKY{
+        position: sticky;
+        top: 0px;
+        left: 5px;
+        background-color: lightgreen;
+    }
+    .one{
+      padding: 16px;
+      margin: 60px 0;
+      width: 80px;
+      height: 80px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      color: rgb(62, 16, 87);
+      background-color: #df70fb; /* Green background */
+      box-shadow: 0 4px 8px #c009e05a; /* Shadow color */
+      position: relative; /* Positioning context */ /* or relative or fixed or sticky */
+      top: 1px; /* Distance from the top */
+      left: 150px; /* Distance from the left */
+    }
+
+    .two{
+      padding: 16px;
+      margin: 60px 0;
+      width: 80px;
+      height: 80px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      color: rgb(232, 232, 232);
+      background-color: #b603e3; /* Green background */
+      box-shadow: 0 4px 8px #c009e05a; /* Shadow color */
+      position: relative; /* Positioning context */ /* or relative or fixed or sticky */
+      top: 100px; /* Distance from the top */
+      left: 200px; /* Distance from the left */
+      z-index: 3; /* lower layer */
+    }
+
+    .three{
+      padding: 16px;
+      margin: 60px 0;
+      width: 130px;
+      height: 50px;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      color: rgb(217, 210, 15);
+      background-color: #72417f; /* Green background */
+      box-shadow: 0 4px 8px #c009e05a; /* Shadow color */
+      position: relative; /* Positioning context */ /* or relative or fixed or sticky */
+      top: 0px; /* Distance from the top */
+      left: 100px; /* Distance from the left */
+      z-index: 6; /* Highest layer */
+    }
+
+    .OverFlowBox {
+      width: 200px;
+      height: 100px;
+      border: 2px solid #333;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    .visible-box {
+      overflow: visible;
+    }
+
+    .hidden-box {
+      overflow: hidden;
+    }
+
+    .scroll-box {
+      overflow: scroll;
+    }
+
+    .auto-box {
+      overflow: auto;
+    }
+
+
+    .flex-container {
+      display: flex;              /* activate flexbox */
+      flex-direction: row;        /* row (default), column, row-reverse, column-reverse */
+      justify-content: space-around; /* horizontal alignment */
+      align-items: center;        /* vertical alignment */
+      border: 2px solid #333;
+      height: 200px;
+    }
+
+    .flex-item {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+
+    .flex-container1 {
+      display: flex;              /* activate flexbox */
+      flex-direction: column;     /* stack items vertically */
+      justify-content: space-around; /* vertical spacing */
+      align-items: center;        /* horizontal alignment */
+      border: 2px solid #333;
+      height: 400px;              /* taller container to show spacing */
+    }
+
+    .flex-container2 {
+      display: flex;
+      flex-wrap: wrap;          /* try changing to nowrap or wrap-reverse */
+      gap: 10px;                /* spacing between items */
+      border: 2px solid #333;
+      padding: 10px;
+      width: 400px;             /* fixed width to force wrapping */
+    }
+
+    .flex-container3 {
+      display: flex;
+      gap: 10px;                /* spacing between items */
+      border: 2px solid #333;
+      padding: 10px;
+      width: 400px;             /* fixed width to force wrapping */
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;          /* allow wrapping into multiple rows */
+      gap: 15px;                /* spacing between items */
+      justify-content: center;  /* center the gallery */
+      border: 2px solid #333;
+      padding: 10px;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(25% - 20px); /* 4 items per row */
+      max-width: calc(25% - 20px);
+      text-align: center;         /* center captions */
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    /* Hover effect */
+    .gallery-item img:hover {
+      transform: scale(1.05);              /* zoom in slightly */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* add shadow */
+    }
+
+    .caption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* 2 per row */
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-item {
+        flex: 1 1 100%; /* 1 per row */
+        max-width: 100%;
+      }
+    }
+
+    </style>
+</head>
+
+
+<body>
+    <button class="my-button">CLick Me</button>
+
+    <div class="box box-solid">ABSOLUTE POSITION </div>
+
+
+    <p>Lorem ipsum dolor sit amet  consectetur adipisicing elit. Ex in quia tempora natus! Consequuntur sint culpa reiciendis corrupti, <span class="Std">FIXED POSITION</span>  sit magnam repellendus, officiis quam quidem modi optio delectus.</p>
+
+    <p>Data science is an interdisciplinary field that combines statistical analysis, computer science, and domain expertise to extract meaningful insights from data, and in today’s digital era it has become one of the most transformative forces across industries. At its core, data science involves collecting, cleaning, and organizing large volumes of structured and unstructured data, then applying algorithms, machine learning models, and visualization techniques to uncover patterns that can drive decision‑making. The rise of big data, fueled by social media, IoT devices, e‑commerce platforms, and enterprise systems, has created an environment where organizations are inundated with information, and data science provides the tools to convert <span Class ="STICKY" > STICKY </span>this raw information into actionable knowledge. A typical data science workflow begins with data acquisition, where information is gathered from databases, APIs, sensors, or logs, followed by preprocessing steps such as handling missing values, normalizing formats, and reducing noise to ensure quality. Once the data is prepared, exploratory data analysis (EDA) is performed to understand distributions, correlations, and anomalies, often using visualization libraries like Matplotlib, Seaborn, or BI tools such as Tableau and Power BI. The next stage involves applying statistical models and machine learning algorithms, ranging from regression and classification to clustering and deep learning, depending on the problem at hand. For example, predictive analytics can forecast customer churn, recommendation systems can personalize shopping experiences, and natural language processing can analyze sentiment in customer feedback. 
+        For example, predictive analytics can forecast customer churn, recommendation systems can personalize shopping experiences, and natural language processing can analyze sentiment in customer feedback. Beyond technical methods, data science emphasizes the importance of domain knowledge, because interpreting results requires understanding the business context, whether it is healthcare, finance, retail, or manufacturing. Ethical considerations also play a crucial role, as data privacy, bias in algorithms, and transparency of models are pressing concerns in modern applications. Companies must ensure that their data practices comply with regulations like GDPR and prioritize fairness in AI systems. The impact of data science is evident in diverse areas: in healthcare, it enables early disease detection and personalized treatment plans; in finance, it powers fraud detection and algorithmic trading; in agriculture, it optimizes crop yields through predictive weather models; and in transportation, it supports autonomous vehicles and smart traffic systems. The skill set required for a data scientist is broad, encompassing programming languages such as Python, R, and SQL, proficiency in machine learning frameworks like TensorFlow or Scikit‑learn, and the ability to communicate findings clearly to stakeholders through storytelling and visualization. As organizations increasingly adopt cloud platforms like AWS, Azure, and Google Cloud, data science workflows are becoming more scalable and collaborative, allowing teams to handle petabytes of data efficiently. Looking ahead, the integration of data science with emerging technologies such as blockchain, quantum computing, and edge AI promises to unlock even greater possibilities, enabling real‑time analytics, secure data sharing, and unprecedented computational power. Ultimately, data science is not just about crunching numbers; it is about bridging the gap between raw data and strategic decisions, empowering businesses and societies to innovate, optimize, and solve complex problems. Its essence lies in transforming uncertainty into clarity, turning information into intelligence, and ensuring that data becomes a catalyst for progress in a rapidly evolving world. </p>
+    <div class="one"> Relative Position</div>
+    <div class="two">Z- Index Low</div>
+    <div class="three">Z- Index High</div>
+
+
+
+  <div class="OverFlowBox visible-box">
+        This is a very long text that will overflow the box. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <div class="OverFlowBox hidden-box">
+        This is a very long text that will overflow the box. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <div class="OverFlowBox scroll-box">
+        This is a very long text that will overflow the box. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <div class="OverFlowBox auto-box">
+        This is a very long text that will overflow the box. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+
+  <h4> FLEX IN ROWS </h4>
+  <div class="flex-container">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+  </div>
+
+  <h4> FLEX IN COLUMNS </h4>
+    <div class="flex-container1" style="flex-direction: column; height: 600px;">
+        <div class="flex-item">Box A</div>
+        <div class="flex-item">Box B</div>
+        <div class="flex-item">Box C</div>
+
+    </div>
+   <h4> FLEX Wrap</h4>
+   <div class="flex-container2">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+    <div class="flex-item">Box 4</div>
+    <div class="flex-item">Box 5</div>
+    <div class="flex-item">Box 6</div>
+  </div>
+
+   <h4> FLEX NO WRAP</h4>
+   <div class="flex-container3">
+    <div class="flex-item">Box 1</div>
+    <div class="flex-item">Box 2</div>
+    <div class="flex-item">Box 3</div>
+    <div class="flex-item">Box 4</div>
+    <div class="flex-item">Box 5</div>
+    <div class="flex-item">Box 6</div>
+  </div>
+
+  <h4> IMAGE GALLERY USING FLEXBOX </h4>
+  <div class="gallery">
+    <div class="gallery-item">
+    <img src="image1.jpg" alt="Image 1">
+    <div class="caption">Image 1 — Dec 1, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image2.jpg" alt="Image 2">
+    <div class="caption">Image 2 — Dec 2, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image3.jpg" alt="Image 3">
+    <div class="caption">Image 3 — Dec 3, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image4.jpg" alt="Image 4">
+    <div class="caption">Image 4 — Dec 4, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image5.jpg" alt="Image 5">
+    <div class="caption">Image 5 — Dec 5, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image6.jpg" alt="Image 6">
+    <div class="caption">Image 6 — Dec 6, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image7.jpg" alt="Image 7">  
+    <div class="caption">Image 7 — Dec 7, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image8.jpg" alt="Image 8">
+    <div class="caption">Image 8 — Dec 8, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image9.jpg" alt="Image 9">  
+    <div class="caption">Image 9 — Dec 9, 2025</div>
+    </div>
+
+    <div class="gallery-item">
+    <img src="image10.jpg" alt="Image 10">
+    <div class="caption">Image 10 — Dec 10, 2025</div>
+    </div>
+
+
+</body>
+</html>
