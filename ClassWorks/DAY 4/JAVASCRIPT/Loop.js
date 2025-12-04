@@ -26,3 +26,17 @@ subjects.forEach(subject => {
     console.log(subject);
 });
 // Note: for...of loop and forEach method cannot be used to iterate through object properties directly.
+
+
+//concatenation of two arrays using for...of loop
+let array1=['a','b','c'];
+let array2=['d','e','f'];
+
+//spread operator
+let array3=[...array1,...array2];
+console.log(array3); // ['a','b','c','d','e','f']
+
+//concat method
+let array4=array1.concat(array2);
+console.log(array4); // ['a','b','c','d','e','f']
+
